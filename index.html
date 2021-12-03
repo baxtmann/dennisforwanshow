@@ -1,8 +1,20 @@
 <html>
 <head>
+<title>Dennis, but on WanShow!</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-66531131-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-
-<title>ERROR 404 </title>
+  gtag('config', 'UA-66531131-6');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
@@ -10,12 +22,92 @@
 <body>
 <center>
 <font face ="Comic Sans MS">
-<h1>OH NO! DENNIS WENT BACK TO TAIWAN!</h1>
-<h3>While you wait for Dennis to fix this, watch this video here!</h3>
 
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+      </label>
+      <em> Enable Dark Mode!</em>
+    </div>
+ 
+</div>
+     
+<script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
+        function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); //add this
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); //add this
+    }    
+}
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+</script>
+    
+<h1>We're back baby!</h1>
+<h2>We need more dennis, so we bought this domain again! We have an honourable mission - </h2><h1>to get Dennis back on WanShow!</h1>
+
+<img class="slideshow" src="dennis.png" width="70%" height="70%">
+<img class="slideshow" src="dennis2.png" width="70%" height="70%">
+<img class="slideshow" src="dennis3.jpg" width="70%" height="70%">
+<img class="slideshow" src="dennis4.jpg" width="70%" height="70%">
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("slideshow");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+<h2>The videos</h2>
+
+<video width="50%" height="50%" autoplay muted loop>
+    <source src="dennisbye.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h3>Dennis Funny Moments!</h3>
+<iframe width="50%" height="50%" src="https://www.youtube.com/embed/dWzLPOUaumo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3>Lil D - All The Asians Wanna Be Me</h3>
+<iframe width="50%" height="50%" src="https://www.youtube.com/embed/7GchAEppPkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3>Bullying PSA</h3>
+<iframe width="50%" height="50%" src="https://www.youtube.com/embed/wPrV3FSy3po" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </center>
 </body>
+<footer>
+    
+    <a href="https://twitter.com/dennisforwan" class="fa fa-twitter fa-3x"></a>
+    Powered by <a href="https://www.jumpstartlabs.co">Jumpstart Innovation Labs</a> and
+    | created by <a href="https://www.baxtmann.me">Brandon Axtmann</a>
+    | <a href="credits.html" target="_blank">Credits</a>
+    | <a href="sitemap.html" target="_blank">Sitemap</a>
+   
+</footer>
+
 </html>
